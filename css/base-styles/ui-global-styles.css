@@ -191,6 +191,9 @@
 /**
 *** font sizing
 **/
+.sizeup1-1 {
+  font-size: 1.1em;
+}
 .sizeup1-3 {
   font-size: 1.3em;
 }

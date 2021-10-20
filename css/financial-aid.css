@@ -84,7 +84,14 @@
 }
 
 .fa-estimate {
-  padding: 2em;
+  background: rgba(11, 57, 48, 0.9) url("https://www.weber.edu/wsuimages/FinancialAid/site/images/fa-incoming-fresh-bg-bw-1x.jpg") no-repeat center center;
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+.fa-estimate__text {
+  color: #FFFFFF;
+  padding: 2.2em;
+  font-family: "tradegothicltstd-extended", sans-serif;
 }
 
 .fa-questions {
@@ -107,6 +114,10 @@
 
 .fa-info__square {
   padding: 0 2em;
+}
+.fa-info__square ul {
+  list-style-type: none;
+  margin-left: 0;
 }
 
 .question-box {

@@ -85,7 +85,20 @@
 }
 
 .fa-estimate {
-  padding: 2em;
+ // @include bg-interchange-retina('https://www.weber.edu/wsuimages/FinancialAid/site/images/fa-incoming-fresh-bg-bw-1x.jpg');
+  //padding: 2em;
+  //@include bg-img-placement();
+  background: rgba(11, 57, 48, 0.9) url('https://www.weber.edu/wsuimages/FinancialAid/site/images/fa-incoming-fresh-bg-bw-1x.jpg') no-repeat center center ;
+  background-size: cover;
+  background-blend-mode: overlay;
+  &__text {
+    color: #FFFFFF;
+    padding: 2.2em;
+    font-family: $font-tge;
+    //font-size: 1.1em;
+
+    //background-color: wsu-palette($wsugreen-colors, 2, 9);
+  }
 }
 .fa-questions {
   @include bg-interchange-retina('https://www.weber.edu/wsuimages/FinancialAid/site/graphics/questions-bg-1x.png');
@@ -97,6 +110,10 @@
 
 .fa-info__square {
   padding: 0 2em;
+  ul {
+    list-style-type: none;
+    margin-left: 0;
+  }
 }
 
 .question-box {
