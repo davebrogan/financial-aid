@@ -12,7 +12,7 @@
 /*******HOME*********/
 .banner--fa-home {
   background-image: url("https://www.weber.edu/wsuimages/why-weber/images/why-weber-banner-1x.jpg");
-  padding-left: 8vw;
+  padding: 4em 0 4em 8vw;
 }
 @media only screen and (min-width: 1024px) and (min-resolution: 192dpi) {
   .banner--fa-home {
@@ -84,12 +84,9 @@
 }
 
 .fa-estimate {
-  background: rgba(11, 57, 48, 0.9) url("https://www.weber.edu/wsuimages/FinancialAid/site/images/fa-incoming-fresh-bg-bw-1x.jpg") no-repeat center center;
-  background-size: cover;
-  background-blend-mode: overlay;
+  background-color: #005c49;
 }
 .fa-estimate__text {
-  color: #FFFFFF;
   padding: 2.2em;
   font-family: "tradegothicltstd-extended", sans-serif;
 }
