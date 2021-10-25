@@ -84,11 +84,35 @@
 }
 
 .fa-estimate {
-  background-color: #005c49;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://www.weber.edu/wsuimages/FinancialAid/site/graphics/incoming-freshmen-background-1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+  padding: 3em;
+}
+@media only screen and (min-width: 1024px) and (min-resolution: 192dpi) {
+  .fa-estimate {
+    background-image: url("https://www.weber.edu/wsuimages/FinancialAid/site/graphics/incoming-freshmen-background-2x.jpg");
+  }
+}
+.fa-estimate__title {
+  color: #FFFFFF;
+  padding: 1.5em;
+  background-color: #f6b221;
+  font-family: "tradegothicltstd-boldext", sans-serif;
 }
 .fa-estimate__text {
-  padding: 2.2em;
-  font-family: "tradegothicltstd-extended", sans-serif;
+  color: #FFFFFF;
+  font-size: 1.3em;
+}
+.fa-estimate__link {
+  color: #f6b221;
+  font: "tradegothicltstd-boldext", sans-serif;
+  font-size: 1.3em;
 }
 
 .fa-questions {

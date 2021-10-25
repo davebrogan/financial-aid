@@ -88,11 +88,25 @@
   //background: rgba(11, 57, 48, 0.9) url('https://www.weber.edu/wsuimages/FinancialAid/site/images/fa-incoming-fresh-bg-bw-1x.jpg') no-repeat center center ;
   //background-size: cover;
   //background-blend-mode: overlay;
-  background-color: wsu-palette($wsugreen-colors, 1);
+  @include flex-column(center, center);
+  @include bg-interchange-retina('https://www.weber.edu/wsuimages/FinancialAid/site/graphics/incoming-freshmen-background-1x.jpg');
+  @include bg-img-placement(left, center);
+  padding: 3em;
+  &__title {
+    color: #FFFFFF !important;
+    padding: 1.5em;
+    background-color: wsu-palette($cos-colors, 1);
+    font-family: $font-tgbe !important;
+  }
   &__text {
-    //color: #FFFFFF;
-    padding: 2.2em;
-    font-family: $font-tge;
+    color: #FFFFFF;
+    font-size: 1.3em !important;
+  }
+  &__link {
+    color: wsu-palette($cos-colors, 1) !important;
+    font-family: $font-tgbe !important
+  ;
+    font-size: 1.3em !important;
   }
 }
 .fa-questions {
