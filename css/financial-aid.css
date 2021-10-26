@@ -10,6 +10,11 @@
 }
 
 /*******HOME*********/
+.showcase-html-section section h2 {
+  margin-bottom: 1em !important;
+  text-transform: none;
+}
+
 .banner--fa-home {
   background-image: url("https://www.weber.edu/wsuimages/why-weber/images/why-weber-banner-1x.jpg");
   padding: 4em 0 4em 8vw;
@@ -92,45 +97,46 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left center;
-  padding: 3em;
+  padding: 3em 1em;
+  min-height: 400px;
+  clip-path: polygon(100% 0, 100% 86%, 50% 100%, 0 86%, 0 0);
 }
 @media only screen and (min-width: 1024px) and (min-resolution: 192dpi) {
   .fa-estimate {
     background-image: url("https://www.weber.edu/wsuimages/FinancialAid/site/graphics/incoming-freshmen-background-2x.jpg");
   }
 }
-.fa-estimate__title {
-  color: #FFFFFF;
-  padding: 1.5em;
-  background-color: #f6b221;
-  font-family: "tradegothicltstd-boldext", sans-serif;
+.fa-estimate__content {
+  background: linear-gradient(150deg, rgba(246, 178, 33, 0.7), rgba(250, 216, 144, 0.7));
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  max-width: 800px;
+  padding: 4em;
 }
-.fa-estimate__text {
-  color: #FFFFFF;
-  font-size: 1.3em;
+.fa-estimate__title {
+  color: #492365 !important;
+  font-family: "tradegothicltstd-boldext", sans-serif !important;
+  font-size: 1.3em !important;
+  align-self: stretch;
+  text-transform: uppercase;
 }
 .fa-estimate__link {
-  color: #f6b221;
-  font: "tradegothicltstd-boldext", sans-serif;
-  font-size: 1.3em;
+  color: #492365;
+  font-family: "tradegothicltstd-boldext", sans-serif !important;
+  font-size: 1.3em !important;
+  align-self: end;
 }
 
 .fa-questions {
-  background-image: url("https://www.weber.edu/wsuimages/FinancialAid/site/graphics/questions-bg-1x.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  box-shadow: inset 0px 0px 23px 6px #1f1f1f;
-  padding: 2em;
+  background-color: #492365;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-}
-@media only screen and (min-width: 1024px) and (min-resolution: 192dpi) {
-  .fa-questions {
-    background-image: url("https://www.weber.edu/wsuimages/FinancialAid/site/graphics/questions-bg-2x.png");
-  }
+  margin-top: -85px;
+  padding: 131px 2em 2em 2em;
 }
 
 .fa-info__square {
@@ -143,6 +149,9 @@
 
 .question-box {
   text-align: center;
+}
+.question-box__title {
+  color: #FFFFFF;
 }
 .question-box__text {
   margin-bottom: 0;
@@ -165,7 +174,6 @@ span.script-accent {
   font-family: "just-lovely", cursive;
   font-size: 3em;
   line-height: 1em;
-  color: #FFFFFF;
   margin-right: 5px;
 }
 
@@ -173,7 +181,18 @@ span.extended-accent {
   font-family: "tradegothicltstd-boldext", sans-serif;
   font-size: 1.5em;
   line-height: 1em;
-  color: #FFFFFF;
+}
+
+.card-module.-white-theme .card-module__header {
+  background-color: #FFFFFF;
+}
+.card-module__content {
+  padding-top: 0;
+  font-family: "tradegothiclt-lightoblique", sans-serif;
+}
+
+.inset-green {
+  background-color: rgba(3, 150, 69, 0.2);
 }
 
 /****** Custom Typography ********/
