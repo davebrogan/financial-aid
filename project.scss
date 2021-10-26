@@ -14,19 +14,37 @@
 /*******HOME*********/
 .showcase-html-section section h2 {
   margin-bottom: 1em !important;
-  text-transform: none;
+  text-transform: none !important;
+  font-family: $font-tgbe;
+  color: wsu-palette($wcpurp-colors, 1);
 }
 .banner--fa-home {
-  @include bg-interchange-retina('https://www.weber.edu/wsuimages/why-weber/images/why-weber-banner-1x.jpg');
-  padding: 4em 0 4em 8vw;
+  @include bg-interchange-retina('https://www.weber.edu/wsuimages/FinancialAid/site/images/financial-aid-home-banner-1x.jpg');
+  //padding: 4em 0 4em 8vw;
+  position: relative;
 }
 
+.fa-title-wrapper {
+  background-color: rgba(0,0,0,0.6);
+  padding: 5em;
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+}
+.fa-title__content {
+  display: flex;
+  align-items: flex-start;
+}
 .page-title-wrap {
   padding: 0;
   &__icon {
-    min-width: 300px;
+    min-width: 350px;
   }
   &__title-block {
+    //display: flex;
+    //flex-direction: row;
+    padding-left: 0;
+  }
+  &__title-text {
     color: #FFF;
     font-size: 32px;
     font-family: $font-tg;
@@ -81,6 +99,11 @@
       }
     }
   }
+}
+
+.fa-apply__buttons {
+  margin-top: 30px;
+  text-align: center;
 }
 
 .fa-disclosures {

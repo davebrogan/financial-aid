@@ -12,33 +12,53 @@
 /*******HOME*********/
 .showcase-html-section section h2 {
   margin-bottom: 1em !important;
-  text-transform: none;
+  text-transform: none !important;
+  font-family: "tradegothicltstd-boldext", sans-serif;
+  color: #492365;
 }
 
 .banner--fa-home {
-  background-image: url("https://www.weber.edu/wsuimages/why-weber/images/why-weber-banner-1x.jpg");
-  padding: 4em 0 4em 8vw;
+  background-image: url("https://www.weber.edu/wsuimages/FinancialAid/site/images/financial-aid-home-banner-1x.jpg");
+  position: relative;
 }
 @media only screen and (min-width: 1024px) and (min-resolution: 192dpi) {
   .banner--fa-home {
-    background-image: url("https://www.weber.edu/wsuimages/why-weber/images/why-weber-banner-2x.jpg");
+    background-image: url("https://www.weber.edu/wsuimages/FinancialAid/site/images/financial-aid-home-banner-2x.jpg");
   }
+}
+
+.fa-title-wrapper {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5em;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.fa-title__content {
+  display: flex;
+  align-items: flex-start;
 }
 
 .page-title-wrap {
   padding: 0;
 }
 .page-title-wrap__icon {
-  min-width: 300px;
+  min-width: 350px;
 }
 .page-title-wrap__title-block {
+  padding-left: 0;
+}
+.page-title-wrap__title-text {
   color: #FFF;
   font-size: 32px;
   font-family: "tradegothiclt", sans-serif;
   max-width: 888px;
   justify-content: start;
 }
-.page-title-wrap__title-block > p {
+.page-title-wrap__title-text > p {
   margin-bottom: 0;
 }
 
@@ -81,6 +101,11 @@
   height: var(--counter-size);
   left: calc(-1 * (var(--counter-size) - 10px));
   top: -5px;
+}
+
+.fa-apply__buttons {
+  margin-top: 30px;
+  text-align: center;
 }
 
 .fa-disclosures {
