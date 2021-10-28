@@ -58,7 +58,7 @@
 
 /************** APPLY STEPS ***************/
 :root {
-  --counter-size: 1.5em;
+  --counter-size: 2.5em;
 }
 
 .user-accounts__list {
@@ -66,36 +66,36 @@
 }
 .request-accounts {
   & ol {
-    margin-top: 17px;
+    display: grid;
+    //grid-template-columns: repeat(4, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 10px;
     list-style: none;
     counter-reset: how-to-counter;
-    margin-left: 2.25rem;
-
     & li {
       counter-increment: how-to-counter;
-      margin-bottom: 37px;
-      padding-left: var(--counter-size);
-      position: relative;
-
-      &:last-child {
-        margin-bottom: inherit;
-      }
-
+      padding: 2em 1em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      font-size: 1.2em;
+      font-family: $font-tg;
+      background-color: #ece9ef;
+      color: #492365;
       &::before {
-        position: absolute;
+        margin-bottom: 33px;
         content: counter(how-to-counter);
         color: #FFF;
-        font-family: "tradegothicltcom-bdcn20", sans-serif;
-        background-color: #492365;
+        font-family: $font-tgb;
+        //background-color: #492365;
+        background-color: wsu-palette($unigray-colors, 1);
         font-size: var(--counter-size);
-        border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: var(--counter-size);
-        height: var(--counter-size);
-        left: calc(-1 * (var(--counter-size) - 10px));
-        top: -5px;
+        width: calc(var(--counter-size) - (var(--counter-size) / 3));
+        height: calc(var(--counter-size) - (var(--counter-size) / 3));
       }
     }
   }
@@ -216,7 +216,6 @@ span.extended-accent {
 }
 
 .inset-green {
-  //background-color: wsu-palette($wsugreen-colors, 4);
   background-color: rgba(3,150,69,0.2);
 }
 
