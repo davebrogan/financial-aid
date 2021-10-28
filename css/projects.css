@@ -175,8 +175,6 @@
 .fa-info__icon {
   display: flex;
   justify-content: center;
-  min-height: 100px;
-  margin-bottom: 20px;
 }
 
 .question-box {
