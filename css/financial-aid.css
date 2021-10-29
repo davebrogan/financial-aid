@@ -9,6 +9,12 @@
   }
 }
 
+@media only screen and (max-width: 1023px) {
+  .fa-info-card-divider {
+    display: none;
+  }
+}
+
 /*******HOME*********/
 .showcase-html-section section h2 {
   margin-bottom: 1em !important;

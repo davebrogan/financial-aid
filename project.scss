@@ -11,6 +11,12 @@
     border-right: none;
   }
 }
+
+.fa-info-card-divider {
+  @media #{$target-laptop-under} {
+    display: none;
+  }
+}
 /*******HOME*********/
 .showcase-html-section section h2 {
   margin-bottom: 1em !important;
