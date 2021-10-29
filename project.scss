@@ -20,29 +20,53 @@
 }
 .banner--fa-home {
   @include bg-interchange-retina('https://www.weber.edu/wsuimages/FinancialAid/site/images/financial-aid-home-banner-1x.jpg');
-  //padding: 4em 0 4em 8vw;
   position: relative;
+  @media #{$target-laptop-over} {
+    max-height: 700px;
+  }
 }
-
 .fa-title-wrapper {
   background-color: rgba(0,0,0,0.6);
-  padding: 5em;
+  padding: 2em;
   position: absolute;
   top: 0; bottom: 0; left: 0; right: 0;
+  @media #{$target-laptop-over} {
+    padding: 5em;
+  }
+  @media #{$target-large-phone} {
+    position: initial;
+  }
 }
 .fa-title__content {
   display: flex;
   align-items: flex-start;
+  @media #{$target-large-phone} {
+    flex-direction: column;
+  }
 }
 .page-title-wrap {
   padding: 0;
   &__icon {
-    min-width: 350px;
+    min-width: 300px;
+    margin-right: 10px;
+    @media #{$target-large-phone} {
+      margin: 0 auto;
+    }
   }
   &__title-block {
-    //display: flex;
-    //flex-direction: row;
     padding-left: 0;
+    padding-top: 7px;
+    &__title.title-override {
+      margin-bottom: 0;
+      line-height: 1;
+      @media #{$target-tablet} {
+        font-size: 35px;
+        margin-bottom: 0;
+      }
+      @media #{$target-large-phone} {
+        font-size: 28px;
+      }
+    }
   }
   &__title-text {
     color: #FFF;
@@ -50,6 +74,12 @@
     font-family: $font-tg;
     max-width: 888px;
     justify-content: start;
+    @media #{$target-tablet} {
+      font-size: 1.3em;
+    }
+    @media #{$target-large-phone} {
+      font-size: 1.2em;
+    }
     & > p {
       margin-bottom: 0;
     }
@@ -67,11 +97,11 @@
 .request-accounts {
   & ol {
     display: grid;
-    //grid-template-columns: repeat(4, minmax(100px, 1fr));
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 10px;
     list-style: none;
     counter-reset: how-to-counter;
+    margin-left: 0;
     & li {
       counter-increment: how-to-counter;
       padding: 2em 1em;
@@ -81,15 +111,15 @@
       text-align: center;
       font-size: 1.2em;
       font-family: $font-tg;
-      background-color: #ece9ef;
-      color: #492365;
+      color: wsu-palette($unigray-colors, 1);
+      background-color: wsu-palette($unigray-colors, 4);
       &::before {
         margin-bottom: 33px;
         content: counter(how-to-counter);
         color: #FFF;
         font-family: $font-tgb;
-        //background-color: #492365;
-        background-color: wsu-palette($unigray-colors, 1);
+        border-radius: 50%;
+        background-color: wsu-palette($wcpurp-colors, 1);
         font-size: var(--counter-size);
         display: flex;
         justify-content: center;
@@ -105,16 +135,11 @@
   margin-top: 30px;
   text-align: center;
 }
-
 .fa-disclosures {
   text-align: right;
   font-size: .8em;
 }
-
 .fa-estimate {
-  //background: rgba(11, 57, 48, 0.9) url('https://www.weber.edu/wsuimages/FinancialAid/site/images/fa-incoming-fresh-bg-bw-1x.jpg') no-repeat center center ;
-  //background-size: cover;
-  //background-blend-mode: overlay;
   @include flex-column(center, center);
   @include bg-interchange-retina('https://www.weber.edu/wsuimages/FinancialAid/site/graphics/incoming-freshmen-background-1x.jpg');
   @include bg-img-placement(left, center);
@@ -124,8 +149,9 @@
   &__content {
     background: linear-gradient(150deg, wsu-palette($cos-colors, 1, 7), wsu-palette($cos-colors, 2, 7));
     @include flex-column(start, center);
-    max-width: 800px;
     padding: 4em;
+    clip-path: polygon(100% 0, 100% 83%, 50% 100%, 0 83%, 0 0);;
+
   }
   &__title {
     color: wsu-palette($wcpurp-colors, 1) !important;
@@ -135,41 +161,40 @@
     text-transform: uppercase;
   }
   &__text {
-    //font-size: 1.3em !important;
+    @media #{$target-large-phone} {
+      text-align: center;
+    }
   }
   &__link {
     color: wsu-palette($wcpurp-colors, 1);
     font-family: $font-tgbe !important;
     font-size: 1.3em !important;
     align-self: end;
+    @media #{$target-large-phone} {
+      align-self: center;
+    }
   }
 }
 .fa-questions {
-  //@include bg-interchange-retina('https://www.weber.edu/wsuimages/FinancialAid/site/graphics/questions-bg-1x.png');
-  //@include bg-img-placement(center, center);
   background-color: wsu-palette($wcpurp-colors, 1);
-  //box-shadow: inset 0px 0px 23px 6px #1f1f1f;
-  //padding: 2em;
   @include flex-row(center, center);
   margin-top: -85px;
   padding: 131px 2em 2em 2em;
 }
 
 .fa-info__square {
-  padding: 0 2em;
+  padding: 2em;
   ul {
     list-style-type: none;
     margin-left: 0;
   }
 }
-
 .fa-info__icon {
   display: flex;
   justify-content: center;
   min-height: 100px;
   margin-bottom: 20px;
 }
-
 .question-box {
   text-align: center;
   &__title {
@@ -189,9 +214,13 @@
         text-decoration: none;
         padding: 5px 0 1px 0;
       }
+      &:visited, &.visited {
+        color: #FFFFFF;
+      }
     }
   }
 }
+
 span.script-accent {
   font-family: "just-lovely", cursive;
   font-size: 3em;
@@ -203,7 +232,6 @@ span.extended-accent {
   font-size: 1.5em;
   line-height: 1em;
 }
-
 .card-module {
   &.-white-theme &__header {
     background-color: #FFFFFF;
@@ -211,14 +239,8 @@ span.extended-accent {
   &__content {
     padding-top: 0;
     font-family: $font-tglo;
-    //font-size: 1.2em;
   }
 }
-
-.inset-green {
-  background-color: rgba(3,150,69,0.2);
-}
-
 
 /****** Custom Typography ********/
 @font-face {

@@ -36,20 +36,49 @@
   left: 0;
   right: 0;
 }
+@media only screen and (max-width: 640px) {
+  .fa-title-wrapper {
+    position: initial;
+    padding: 2em;
+  }
+}
 
 .fa-title__content {
   display: flex;
   align-items: flex-start;
+}
+@media only screen and (max-width: 640px) {
+  .fa-title__content {
+    flex-direction: column;
+  }
 }
 
 .page-title-wrap {
   padding: 0;
 }
 .page-title-wrap__icon {
-  min-width: 350px;
+  min-width: 300px;
+  margin-right: 10px;
+}
+@media only screen and (max-width: 640px) {
+  .page-title-wrap__icon {
+    margin: 0 auto;
+  }
 }
 .page-title-wrap__title-block {
   padding-left: 0;
+  padding-top: 7px;
+}
+@media only screen and (max-width: 768px) {
+  .page-title-wrap__title-block__title.title-override {
+    font-size: 35px;
+    margin-bottom: 0;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .page-title-wrap__title-block__title.title-override {
+    font-size: 28px;
+  }
 }
 .page-title-wrap__title-text {
   color: #FFF;
@@ -58,13 +87,23 @@
   max-width: 888px;
   justify-content: start;
 }
+@media only screen and (max-width: 768px) {
+  .page-title-wrap__title-text {
+    font-size: 1.3em;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .page-title-wrap__title-text {
+    font-size: 1.2em;
+  }
+}
 .page-title-wrap__title-text > p {
   margin-bottom: 0;
 }
 
 /************** APPLY STEPS ***************/
 :root {
-  --counter-size: 1.5em;
+  --counter-size: 2.5em;
 }
 
 .user-accounts__list {
@@ -72,35 +111,50 @@
 }
 
 .request-accounts ol {
-  margin-top: 17px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
   list-style: none;
   counter-reset: how-to-counter;
-  margin-left: 2.25rem;
+  margin-left: 0;
 }
 .request-accounts ol li {
   counter-increment: how-to-counter;
-  margin-bottom: 37px;
-  padding-left: var(--counter-size);
-  position: relative;
-}
-.request-accounts ol li:last-child {
-  margin-bottom: inherit;
+  padding: 2em 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2em;
+  font-family: "tradegothiclt", sans-serif;
+  color: #575047;
+  background-color: #eeedec;
+  /*      &:first-child {
+          background-color: wsu-palette($wcpurp-colors, 3);
+        }
+        &:nth-child(2) {
+          background-color: wsu-palette($lind-colors, 3);
+        }
+        &:nth-child(3) {
+          background-color: wsu-palette($east-colors, 3);
+        }
+        &:nth-child(4) {
+          background-color: wsu-palette($moyes-colors, 3);
+        }*/
 }
 .request-accounts ol li::before {
-  position: absolute;
+  margin-bottom: 33px;
   content: counter(how-to-counter);
   color: #FFF;
-  font-family: "tradegothicltcom-bdcn20", sans-serif;
+  font-family: "tradegothiclt-bold", sans-serif;
+  border-radius: 50%;
   background-color: #492365;
   font-size: var(--counter-size);
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: var(--counter-size);
-  height: var(--counter-size);
-  left: calc(-1 * (var(--counter-size) - 10px));
-  top: -5px;
+  width: calc(var(--counter-size) - (var(--counter-size) / 3));
+  height: calc(var(--counter-size) - (var(--counter-size) / 3));
 }
 
 .fa-apply__buttons {
@@ -137,8 +191,8 @@
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  max-width: 800px;
   padding: 4em;
+  clip-path: polygon(100% 0, 100% 82%, 50% 100%, 0 82%, 0 0);
 }
 .fa-estimate__title {
   color: #492365 !important;
@@ -165,7 +219,7 @@
 }
 
 .fa-info__square {
-  padding: 0 2em;
+  padding: 2em;
 }
 .fa-info__square ul {
   list-style-type: none;
@@ -175,6 +229,8 @@
 .fa-info__icon {
   display: flex;
   justify-content: center;
+  min-height: 100px;
+  margin-bottom: 20px;
 }
 
 .question-box {
